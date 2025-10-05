@@ -1,0 +1,14 @@
+{
+  "env": {
+    "dev": {
+      "name": "development",
+      "url": "http://localhost:3001"
+    },
+    "prod": {
+      "name": "production",
+      "url": "https://healthy-hound-664.convex.site"
+    }
+  },
+  "http": "convex/http.ts",
+  "generated": "convex/_generated"
+}
