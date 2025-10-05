@@ -58,7 +58,7 @@ function LanguageSelector() {
           aria-hidden="true"
         />
 
-        <div className="size-5 sm:block hidden rounded-md bg-gray-800/50 p-0.5 group-hover:scale-110 transition-transform">
+        <div className="size-5 block rounded-md bg-gray-800/50 p-0.5 group-hover:scale-110 transition-transform">
           <Image
             src={currentLanguageObj.logoPath}
             alt="programming language logo"
@@ -68,7 +68,7 @@ function LanguageSelector() {
           />
         </div>
 
-        <span className="text-gray-200 min-w-[80px] text-left group-hover:text-white transition-colors">
+        <span className="text-gray-200 w-auto text-left group-hover:text-white transition-colors">
           {currentLanguageObj.label}
         </span>
 

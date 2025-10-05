@@ -47,7 +47,7 @@ function EditorPanel() {
   if (!mounted) return null;
 
   return (
-    <div className="relative px-2 sm:px-0"> {/* Added horizontal padding for mobile */}
+    <div className="relative px-2 sm:px-0 mb-5 sm:mb-0"> {/* Added horizontal padding for mobile */}
       <div className="relative bg-[#12121a]/90 backdrop-blur rounded-xl border border-white/[0.05] sm:p-6 p-3">
         {/* Header */}
         <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
