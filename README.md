@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./favicon.ico" alt="Shadyx Logo" width="30" style="vertical-align: middle;"/>
+  <img src="./favicon.png" alt="Shadyx Logo" width="30" style="vertical-align: middle;"/>
   <span style="font-size: 26px; font-weight: 700; vertical-align: middle; margin-left: 8px;">
     Shadyx Lab
   </span>
