@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-// @ts-expect-error
+// @ts-ignore
 import "./globals.css";
 import {ClerkProvider} from '@clerk/nextjs'
 import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
