@@ -9,8 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^1.5.2",
     "@monaco-editor/react": "^4.7.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tooltip": "^1.2.8",
     "class-variance-authority": "^0.7.0",
     "convex": "^1.27.3",
     "framer-motion": "^12.23.22",
