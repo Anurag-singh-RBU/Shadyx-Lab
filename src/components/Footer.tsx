@@ -37,7 +37,6 @@ export default function Footer() {
             <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
           </div>
 
-          {/* RIGHT SIDE - Grid of 3 blocks */}
           <div className="grid grid-cols-2 pl-3 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 lg:w-1/2">
             <div>
               <h3 className="mb-4 text-lg font-bold font-JB">Pages</h3>
@@ -159,7 +158,7 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground font-GS">
             © 2025 Shadyx UI. All rights reserved.
           </p>
-          <nav className="flex gap-4 text-sm font-GS">
+          <nav className="sm:flex gap-4 text-sm font-GS hidden">
             <a href="#" className="transition-colors hover:text-primary">
               Privacy Policy
             </a>
