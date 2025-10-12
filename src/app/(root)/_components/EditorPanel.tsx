@@ -1,19 +1,22 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { defineMonacoThemes, LANGUAGE_CONFIG } from "../_constants";
 import { Editor } from "@monaco-editor/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { RotateCcwIcon, TypeIcon } from "lucide-react";
+import { RotateCcwIcon, ShareIcon, TypeIcon } from "lucide-react";
 import { useClerk } from "@clerk/nextjs";
 import { EditorPanelSkeleton } from "./EditorPanelSkeleton";
 import { useCodeEditorStore } from "@/app/store/useCodeEditorStore";
 import useMounted from "@/hooks/UseMounted";
+import ShareSnippetDialog from "./ShareSnippetDialog";
 
 function EditorPanel() {
   const clerk = useClerk();
   const { language, theme, fontSize, editor, setFontSize, setEditor } = useCodeEditorStore();
   const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+
+  const [isShareDialogOpen, setIsShareDialogOpen] = useState(false);
 
   const mounted = useMounted();
 
@@ -47,9 +50,8 @@ function EditorPanel() {
   if (!mounted) return null;
 
   return (
-    <div className="relative px-2 sm:px-0 mb-5 sm:mb-0"> {/* Added horizontal padding for mobile */}
+    <div className="relative px-2 sm:px-0 mb-5 sm:mb-0">
       <div className="relative bg-[#12121a]/90 backdrop-blur rounded-xl border border-white/[0.05] sm:p-6 p-3">
-        {/* Header */}
         <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
           <div className="flex items-center gap-3">
             <div className="sm:flex hidden items-center justify-center w-8 h-8 rounded-lg bg-[#1e1e2e] ring-1 ring-white/5">
@@ -60,11 +62,9 @@ function EditorPanel() {
               <p className="text-xs text-gray-400 font-mono sm:block hidden">Write and execute your code</p>
             </div>
           </div>
-          {/* Mobile: justify-between | Desktop: original layout */}
-            <div className="flex sm:items-center sm:w-auto w-full sm:justify-around justify-between items-start sm:gap-3 gap-2 sm:flex-nowrap flex-wrap">
-            {/* Font Size Slider */}
-            <div className="flex items-center gap-3 px-3 py-2 bg-[#1e1e2e] rounded-lg ring-1 ring-white/5 w-auto">
-              <TypeIcon className="size-4 text-gray-400" />
+            <div className="flex sm:items-center sm:w-auto w-full sm:justify-around justify-between items-start sm:gap-3 gap-1 sm:flex-nowrap flex-wrap">
+            <div className="flex items-center gap-3 sm:px-3 px-2 py-2 bg-[#1e1e2e] rounded-lg ring-1 ring-white/5 w-auto">
+              <TypeIcon className="size-4 text-gray-400"/>
               <div className="flex items-center gap-3 w-full">
                 <input
                   type="range"
@@ -72,9 +72,9 @@ function EditorPanel() {
                   max="24"
                   value={fontSize}
                   onChange={(e) => handleFontSizeChange(parseInt(e.target.value))}
-                  className="w-full sm:w-20 h-1 bg-gray-600 rounded-lg cursor-pointer"
+                  className="w-18 sm:w-20 h-1 bg-gray-600 rounded-lg cursor-pointer"
                 />
-                <span className="text-sm font-medium text-gray-400 min-w-[2rem] text-center">
+                <span className="text-sm font-medium text-gray-400 sm:min-w-[2rem] text-center">
                   {fontSize}
                 </span>
               </div>
@@ -88,6 +88,17 @@ function EditorPanel() {
               aria-label="Reset to default code"
             >
               <RotateCcwIcon className="size-5 text-gray-400" />
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => setIsShareDialogOpen(true)}
+              className="inline-flex font-mono items-center gap-2 px-4 py-2 rounded-lg overflow-hidden bg-gradient-to-r
+               from-blue-500 to-blue-600 opacity-90 hover:opacity-100 transition-opacity"
+            >
+              <ShareIcon className="size-4 text-white" />
+              <span className="text-sm font-medium text-white ">Share</span>
             </motion.button>
           </div>
         </div>
@@ -131,6 +142,7 @@ function EditorPanel() {
           )}
         </div>
       </div>
+      {isShareDialogOpen && <ShareSnippetDialog onClose={() => setIsShareDialogOpen(false)} />}
     </div>
   );
 }

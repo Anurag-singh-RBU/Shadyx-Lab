@@ -41,7 +41,7 @@ function ThemeSelector() {
   if (!mounted) return null;
 
   return (
-    <div className="relative sm:block hidden" ref={dropdownRef}>
+    <div className="relative" ref={dropdownRef}>
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

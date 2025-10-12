@@ -14,6 +14,33 @@ type LanguageConfig = Record<
 >;
 
 export const LANGUAGE_CONFIG: LanguageConfig = {
+    java: {
+    id: "java",
+    label: "Java",
+    logoPath: "/java.png",
+    pistonRuntime: { language: "java", version: "15.0.2" },
+    monacoLanguage: "java",
+    defaultCode: `public class Main {
+
+  public static void main(String[] args) {
+
+    // Create array
+    int[] numbers = {1, 2, 3, 4, 5};
+    
+    // Print original numbers
+    System.out.print("Original numbers : ");
+    printArray(numbers);
+
+  }
+  
+  public static void printArray(int[] arr){
+
+    for(int n : arr) System.out.print(n + " ");
+    System.out.println();
+
+  }
+}`,
+},
   javascript: {
     id: "javascript",
     label: "JavaScript",
@@ -70,33 +97,6 @@ numbers = [1, 2, 3, 4, 5]
 # Calculate sum
 numbers_sum = sum(numbers)
 print(f"Sum of numbers : {numbers_sum}")`,
-  },
-  java: {
-    id: "java",
-    label: "Java",
-    logoPath: "/java.png",
-    pistonRuntime: { language: "java", version: "15.0.2" },
-    monacoLanguage: "java",
-    defaultCode: `public class Main {
-
-  public static void main(String[] args) {
-
-    // Create array
-    int[] numbers = {1, 2, 3, 4, 5};
-    
-    // Print original numbers
-    System.out.print("Original numbers : ");
-    printArray(numbers);
-
-  }
-  
-  public static void printArray(int[] arr){
-
-    for(int n : arr) System.out.print(n + " ");
-    System.out.println();
-
-  }
-}`,
   },
   go: {
     id: "go",
