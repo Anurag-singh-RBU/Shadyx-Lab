@@ -81,7 +81,7 @@ function SnippetDetailPage() {
               beforeMount={defineMonacoThemes}
               options={{
                 minimap: { enabled: false },
-                fontSize: 16,
+                fontSize: 12,
                 readOnly: true,
                 automaticLayout: true,
                 scrollBeyondLastLine: false,
@@ -93,7 +93,7 @@ function SnippetDetailPage() {
                 smoothScrolling: true,
                 contextmenu: true,
                 wordWrap: "on",
-                lineNumbersMinChars: isMobile ? 2 : 5,
+                lineNumbersMinChars: isMobile ? 3 : 5,
                 renderLineHighlight: "all",
                 lineHeight: 1.4,
                 letterSpacing: 0.5,

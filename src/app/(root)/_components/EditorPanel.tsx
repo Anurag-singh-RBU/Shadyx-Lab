@@ -50,7 +50,7 @@ function EditorPanel() {
   if (!mounted) return null;
 
   return (
-    <div className="relative px-2 sm:px-0 mb-5 sm:mb-0">
+    <div className="relative px-0 sm:px-0 mb-5 sm:mb-0">
       <div className="relative bg-[#12121a]/90 backdrop-blur rounded-xl border border-white/[0.05] sm:p-6 p-3">
         <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
           <div className="flex items-center gap-3">
@@ -126,7 +126,7 @@ function EditorPanel() {
                 smoothScrolling: true,
                 contextmenu: true,
                 wordWrap: "on",
-                lineNumbersMinChars: isMobile ? 2 : 5,
+                lineNumbersMinChars: isMobile ? 3 : 5,
                 renderLineHighlight: "all",
                 lineHeight: 1.4,
                 letterSpacing: 0.5,

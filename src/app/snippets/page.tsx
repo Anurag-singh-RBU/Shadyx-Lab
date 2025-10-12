@@ -44,9 +44,9 @@ function SnippetsPage() {
     <div className="min-h-screen bg-[#0a0a0f] font-mono">
       <NavigationHeader />
 
-      <div className="relative max-w-7xl mx-auto px-4 py-12">
+      <div className="relative sm:max-w-7xl w-full sm:mx-auto px-4 py-12">
         {/* Hero */}
-        <div className="text-center sm:max-w-4xl w-full mx-auto mb-16 sm:mt-10 mt-5">
+        <div className="text-center sm:max-w-4xl w-full sm:mx-auto mb-16 sm:mt-10 mt-5">
           
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -175,7 +175,7 @@ function SnippetsPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="relative max-w-md mx-auto mt-20 p-8 rounded-2xl overflow-hidden"
+            className="relative max-w-md mx-auto sm:mt-20 p-8 rounded-2xl overflow-hidden"
           >
             <div className="text-center">
               <div
@@ -185,7 +185,7 @@ function SnippetsPage() {
                 <Code className="w-8 h-8 text-gray-400" />
               </div>
               <h3 className="text-xl font-medium text-white mb-3">No snippets found</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-400 mb-6 sm:block hidden">
                 {searchQuery || selectedLanguage
                   ? "Try adjusting your search query or filters"
                   : "Be the first to share a code snippet with the community"}

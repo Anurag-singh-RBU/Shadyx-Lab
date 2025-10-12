@@ -63,7 +63,7 @@ function ProfilePage() {
     <div className="min-h-screen bg-[#0a0a0f]">
       <NavigationHeader />
 
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="sm:max-w-7xl w-full mx-auto px-4 py-12">
         {/* Profile Header */}
 
         {userStats && userData && (

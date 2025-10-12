@@ -63,24 +63,12 @@ async function Header() {
             <Link
               href="/snippets"
               className="group flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-gray-300 bg-gray-800/50 
-                hover:bg-blue-500/10 border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg w-fit">
+                hover:bg-blue-500/10 border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg w-full sm:w-auto">
               <SquareDashedBottomCode className="w-4 h-4 relative z-10 group-hover:rotate-3 transition-transform" />
               <span className="text-sm font-medium relative z-10 group-hover:text-white transition-colors">
                 Snippets
               </span>
             </Link>
-
-            {!convexUser?.isPro && (
-              <Link
-                href="https://shadyxui.in/docs"
-                className="flex sm:hidden items-center justify-center gap-2 px-3 py-1.5 rounded-lg border border-amber-500/20 hover:border-amber-500/40 bg-gradient-to-r from-amber-500/10 
-                  to-orange-500/10 hover:from-amber-500/20 hover:to-orange-500/20 
-                  transition-all duration-300 w-fit">
-                <span className="text-md font-medium text-amber-400/90 hover:text-amber-300">
-                  Docs
-                </span>
-              </Link>
-            )}
 
 
             <div className="sm:flex hidden items-center gap-3">
