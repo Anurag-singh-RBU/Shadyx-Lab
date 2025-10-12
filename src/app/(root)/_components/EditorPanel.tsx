@@ -55,15 +55,15 @@ function EditorPanel() {
         <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
           <div className="flex items-center gap-3">
             <div className="sm:flex hidden items-center justify-center w-8 h-8 rounded-lg bg-[#1e1e2e] ring-1 ring-white/5">
-              <Image src={`/${language}.png`} alt="Logo" width={24} height={24} />
+              <Image src={`/${language}.png`} alt="Logo" width={24} height={24}/>
             </div>
             <div>
               <h2 className="text-sm font-bold text-white font-mono sm:block hidden">Code Workspace</h2>
               <p className="text-xs text-gray-400 font-mono sm:block hidden">Write and execute your code</p>
             </div>
           </div>
-            <div className="flex sm:items-center sm:w-auto w-full sm:justify-around justify-between items-start sm:gap-3 gap-1 sm:flex-nowrap flex-wrap">
-            <div className="flex items-center gap-3 sm:px-3 px-2 py-2 bg-[#1e1e2e] rounded-lg ring-1 ring-white/5 w-auto">
+            <div className="flex sm:items-center sm:w-auto w-full sm:justify-around items-start sm:gap-3 gap-3 sm:flex-nowrap flex-wrap">
+            <div className="flex sm:items-center gap-3 sm:px-3 px-2 py-2 bg-[#1e1e2e] rounded-lg ring-1 ring-white/5 w-auto">
               <TypeIcon className="size-4 text-gray-400"/>
               <div className="flex items-center gap-3 w-full">
                 <input

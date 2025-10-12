@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Blocks, Sparkles, SquareDashedBottomCode } from "lucide-react";
+import { Blocks, SquareDashedBottomCode } from "lucide-react";
 import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
 import RunButton from "./RunButton";
