@@ -121,13 +121,6 @@ function SnippetCard({ snippet }: { snippet: Snippet }) {
                   </div>
                 </div>
               </div>
-
-              <div className="relative group/code text-xs">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 to-purple-500/5 rounded-lg opacity-0 group-hover/code:opacity-100 transition-all" />
-                <pre className="relative bg-black/30 rounded-lg p-4 overflow-hidden text-xs text-gray-300 font-mono line-clamp-3">
-                  {snippet.code}
-                </pre>
-              </div>
             </div>
           </div>
         </div>
